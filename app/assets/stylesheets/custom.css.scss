@@ -27,7 +27,79 @@
 
 
 }
+.left_bar{
+  width:530px;
+  float:left;margin-right:50px; 
+  h2{
+    margin-top:21px;
+    word-spacing:3px;
+    margin-bottom:25px;
+  }
+  .feature{
+    margin-left:12px;
+    float:left;margin-bottom:25px;
+    .feature_description{
+      float:left;
+      margin-left:30px;
+      width:382px;margin-top:38px;
+    }
+    .imge{
+      display:block;
+      float:left
+    }
+  }
 
+  
+}
+.right_bar{
+  float:right;
+  width:355px;
+  h2{
+    margin:21px 0;
+    word-spacing:3px;
+  }
+  .testimonials{ 
+    h2{
+      margin:21px 0px 23px 0;
+    }
+    .testimonial_description{
+      float:left;
+      width:380px;
+      margin-bottom:55px;
+      .pi{
+        margin-left:0;
+        width:315px;
+        font-size:16px;
+        word-spacing:-1px;
+        .signature{
+          font-style:normal;
+          margin-left:40px;
+        }
+        span.desc{
+          font-style:italic;
+          margin-right: 0px;
+          margin-left: 0px;
+        }
+        span.open_quotes{
+          background:url(/assets/open_quotes.png) no-repeat;
+          display:block;
+          float:left;
+          width:16px;
+          height:12px;
+          margin-right:5px;
+        }
+        span.close_quotes{
+          background:url(/assets/close_quotes.png) no-repeat;
+          display:block;
+          float:right;
+          width:16px;
+          height:12px;
+        }
+      }
+    }
+  }
+
+}
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -106,7 +178,7 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top:25px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
@@ -116,8 +188,21 @@ footer {
       color: $grayDarker;
     }
   }  
+  .center{
+    width: 200px;
+    margin: 0 auto;
+    list-style: none;
+  }
+  .center_box{
+    width: 350px;
+    margin: 0 auto;
+    list-style: none;
+  }
   small { 
-    float: left; 
+    float: left;
+    list-style: none;
+    font-size: 12px;
+ 
   }
   ul {
     float: right;
@@ -128,7 +213,36 @@ footer {
     }
   }
 }
+.carousel_box{
+  /*background-color: black;*/
+}
 
+.carousel_buttons_left{
+  margin-top: 200px;
+  margin-left: 150px;
+  
+  a{
+    font-size: 150px;
+    font-style: bold;
+    color: black;
+
+
+  }
+
+}
+.carousel_buttons_right{
+  margin-top: 200px;
+  margin-right: 125px;
+  a{
+    font-size: 150px;
+    font-style: bold;
+    color: black;
+
+
+  }
+
+
+}
 
 /* miscellaneous */
 

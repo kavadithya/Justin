@@ -94,13 +94,20 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
+    <div class="container-fluid">
+      <div >
       <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
       <% end %>
       <%= yield %>
-      <%= render 'layouts/footer' %>
+      <% if request.fullpath == root_path %>
+        <%= render 'layouts/footer_home_page' %>
+      <% else %>
+        <%= render 'layouts/footer_home_page' %>
+      <% end %>
       <%= debug(params) if Rails.env.development? %>
-    </div>
+    </div></div>
   </body>
 </html> 

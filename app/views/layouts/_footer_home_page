@@ -1,0 +1,30 @@
+<footer class="footer">
+  <div class='row-fluid'>
+    <div class='span1'></div>
+    <div class='span10'>
+      <small>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Contact Us', contact_path %></li>
+        <li><%= link_to "FAQ's", '#'%></li>
+        <li><%= link_to 'Terms & Privacy', '#'%></li>
+      </small>
+      <nav>
+        <ul>
+          <img src="/assets/rails.png"  />
+        </ul>
+      </nav>
+
+
+      <div class='center_box'>
+        <li>SignUp for HIBWIKI Newsletter</li>
+        <div class="row">
+          <div class="span6 offset3">
+          
+          </div>
+        </div>
+        <li>Contact Us: admin@h1bwiki.com</li>
+      </div>
+    </div>
+    <div class='span1'></div>
+  </div>
+</footer>
