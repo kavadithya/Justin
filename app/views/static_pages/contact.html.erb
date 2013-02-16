@@ -1,6 +1,37 @@
-<% provide(:title, 'Contact') %>
-<h1>Contact</h1>
-<p>
-  Contact Ruby on Rails Tutorial about the sample app at the
-  <a href="http://railstutorial.org/contact">contact page</a>.
-</p>
+<a href='#' class='next'>next</a>
+<a href='#' class='prev'>prev</a>
+<div id="carousel">
+	<img src="/assets/one.jpg" alt="" class="slide" />
+	<img src="/assets/twotwo.jpg" alt="" class="slide" />
+	<img src="/assets/three.jpg" alt="" class="slide" />
+	<img src="/assets/four.jpg" alt="" class="slide" />
+	<img src="/assets/five.jpg" alt="" class="slide" />
+	<img src="/assets/1.jpg" alt="" class="slide" />
+	<img src="/assets/3.jpg" alt="" class="slide" />
+</div>
+
+<ul id="carousel-descriptions">
+	<li class="desc current">Slide 1 Description Goes Here</li>
+	<li class="desc">Slide 2 Description Goes Here</li>
+	<li class="desc">Slide 3 Description Goes Here</li>
+	<li class="desc">Slide 4 Description Goes Here</li>
+	<li class="desc">Slide 5 Description Goes Here</li>
+	<li class="desc">Slide 6 Description Goes Here</li>
+	<li class="desc">Slide 7 Description Goes Here</li>
+</ul>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/jquery.roundabout.min.js"></script>
+<script type="text/javascript">
+(function($) {
+
+var $descriptions = $('#carousel-descriptions').children('li'),
+	$controls = $('#carousel-controls').find('span'),
+	$carousel = $('#carousel').roundabout({childSelector:"img", minOpacity:1, autoplay:false,  btnNext: ".next", btnPrev: '.prev' }).on('focus', 'img', function() {
+			var slideNum = $carousel.roundabout("getChildInFocus");
+			
+			$descriptions.add($controls).removeClass('current');
+			$($descriptions.get(slideNum)).addClass('current');
+		});
+}(jQuery));
+</script>

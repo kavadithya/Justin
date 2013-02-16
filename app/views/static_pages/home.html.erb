@@ -1,26 +1,44 @@
-<% if signed_in? %>
-  <div class="row">
-    <aside class="span4">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      
-    </aside>
-    
-  </div>  
-<% else %>
-  <div class="center hero-unit">
-    <h1>Welcome to the Sample App</h1>
+<a href='#' class='next'>next</a>
+<a href='#' class='prev'>prev</a>
 
-    <h2>
-      This is the home page for the
-      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path, 
-                                class: "btn btn-large btn-primary" %>
+<div id="carousel">
+  <div>
+    <img src="/assets/one.jpg" alt="" class="slide" />
   </div>
+  <div>
+    <img src="/assets/twotwo.jpg" alt="" class="slide" />
+  </div>
+  <div>
+    <img src="/assets/three.jpg" alt="" class="slide" />
+  </div>
+  <div>
+    <img src="/assets/four.jpg" alt="" class="slide" />
+  </div>
+  <div>
+    <img src="/assets/five.jpg" alt="" class="slide" />
+  </div>
+</div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
-<% end %> 
+<ul id="carousel-descriptions">
+  <li class="desc current">Slide 1 Description Goes Here</li>
+  <li class="desc">Slide 2 Description Goes Here</li>
+  <li class="desc">Slide 3 Description Goes Here</li>
+  <li class="desc">Slide 4 Description Goes Here</li>
+  <li class="desc">Slide 5 Description Goes Here</li>
+</ul>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/jquery.roundabout.min.js"></script>
+<script type="text/javascript">
+(function($) {
+
+var $descriptions = $('#carousel-descriptions').children('li'),
+  $controls = $('#carousel-controls').find('span'),
+  $carousel = $('#carousel').roundabout({childSelector:"div", minOpacity:1, autoplay:false,  btnNext: ".next", btnPrev: '.prev' }).on('focus', 'div', function() {
+      var slideNum = $carousel.roundabout("getChildInFocus");
+      
+      $descriptions.add($controls).removeClass('current');
+      $($descriptions.get(slideNum)).addClass('current');
+    });
+}(jQuery));
+</script>
