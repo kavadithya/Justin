@@ -14,7 +14,7 @@ Ashwin::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -34,4 +34,21 @@ Ashwin::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true 
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+config.action_mailer.smtp_settings = {
+  :enable_starttls_auto => true,
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :user_name            =>"kv.citrus@gmail.com",
+  :password             => "kvcitrix1",
+  :authentication       => :plain,
+  :openssl_verify_mode => OpenSSL::SSL::VERIFY_NONE, 
+
+}
+
+  ENV['RECAPTCHA_PUBLIC_KEY'] = '6LdiIN0SAAAAALnECVcuPVeompwKOrzqjqK2FT4a' 
+  ENV['RECAPTCHA_PRIVATE_KEY'] = '6LdiIN0SAAAAAB7aFSOQwPSaaQiVTTHnNTyFbC_7' 
+
 end

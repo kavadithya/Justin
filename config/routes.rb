@@ -1,14 +1,17 @@
 Ashwin::Application.routes.draw do
-  resources :users
+  resources :users, :employers
   resources :sessions, only: [:new, :create, :destroy]
+  resources :session_employers
   root to: "static_pages#home"
 
   match '/signup', to: "users#new"
   match '/signin', to: "sessions#new"
   match '/signout', to: "sessions#destroy", via: :delete
-
+  match '/signin_employer', to: "session_employers#new"
+  match '/signout_employer', to: "session_employers#destroy", via: :delete
+  match '/signup_employer', to: "employers#new"
   match '/help', to: "static_pages#help"
-  
+  match '/common_signup', to: "static_pages#common_signup"
   match '/about', to: "static_pages#about"
   match '/contact', to: "static_pages#contact"
 

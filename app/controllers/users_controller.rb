@@ -15,12 +15,15 @@ class UsersController < ApplicationController
   end
   def create
     @user = User.new(params[:user])
-    if @user.save
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
-      sign_in @user
-    else
-      render 'new'
+    if verify_recaptcha :private_key => '6LdxIN0SAAAAAJqpFhwFbMrcfhPtFPfIhVx3u98o' 
+      if @user.save
+        #UserMailer.registration_confirmation(@user).deliver
+        flash[:success] = "Welcome to the Sample App!"
+        redirect_to @user
+        sign_in @user
+      else
+        render 'new'
+      end
     end
   end
 

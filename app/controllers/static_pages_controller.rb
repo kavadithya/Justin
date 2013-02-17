@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def common_signup
+  end
 end

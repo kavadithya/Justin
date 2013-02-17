@@ -1,5 +1,56 @@
 @import "bootstrap";
 
+
+.box{
+.common_signup_box{
+  width:530px;
+  float:left;
+  margin-right:50px; 
+  h2{
+    margin-top:21px;
+    word-spacing:3px;
+    margin-bottom:25px;
+  }
+  .job_left{
+    margin-left:12px;
+    float:left;margin-bottom:25px;
+    .job_description{
+      float:left;
+      margin-left:30px;
+      width:382px;
+      /*margin-top:5px;*/
+      font-size: 20px;
+    }
+    .imge{
+      display:block;
+      float:left
+    }
+    .link{
+      float: left;
+
+    }
+  }
+  .job_right{
+    margin-left:65px;
+    float:left;
+    margin-bottom:25px;
+    .job_description{
+      float:left;
+      margin-left:30px;
+      width:382px;
+      /*margin-top:15px;*/
+      font-size: 20px;
+    }
+    .imge{
+      display:block;
+      float:left
+    }
+  }
+}
+}
+.make_center{
+   float: right;
+}
 .navbar {
 .navbar-inner {
   background-color: #2867ed;/*ground color will be black for all browsers */
@@ -29,7 +80,8 @@
 }
 .left_bar{
   width:530px;
-  float:left;margin-right:50px; 
+  float:left;
+  margin-right:50px; 
   h2{
     margin-top:21px;
     word-spacing:3px;
@@ -41,7 +93,9 @@
     .feature_description{
       float:left;
       margin-left:30px;
-      width:382px;margin-top:38px;
+      width:382px;
+      margin-top:15px;
+      font-size: 20px;
     }
     .imge{
       display:block;
@@ -150,6 +204,15 @@ h2 {
   font-weight: normal;
   color: $grayLight;
 }
+h3{
+  font-size: 2.0em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  font-style: bold;
+  font-weight: normal;
+  color: black;
+  
+}
 
 p {
   font-size: 1.1em;
@@ -178,7 +241,7 @@ p {
 /* footer */
 
 footer {
-  margin-top:25px;
+  margin-top:200px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
