@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
   def create
     @user = User.new(params[:user])
-    if verify_recaptcha :private_key => '6LdxIN0SAAAAAJqpFhwFbMrcfhPtFPfIhVx3u98o' 
+    if verify_recaptcha :private_key => '6LfuIN0SAAAAAEWR3_RVhKeB7jWrMqePizj0yesA' 
       if @user.save
         #UserMailer.registration_confirmation(@user).deliver
         flash[:success] = "Welcome to the Sample App!"

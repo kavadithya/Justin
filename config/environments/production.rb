@@ -65,7 +65,7 @@ Ashwin::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  ENV['RECAPTCHA_PUBLIC_KEY'] = '6LdxIN0SAAAAALunqqjb1xltZDLPMuH1Jg9apNgx' 
-  ENV['RECAPTCHA_PRIVATE_KEY'] = '6LdxIN0SAAAAAJqpFhwFbMrcfhPtFPfIhVx3u98o'
+  ENV['RECAPTCHA_PUBLIC_KEY'] = '6LfuIN0SAAAAAM6V5X5jZk6oTTnuWxQ_7lr4XVHQ' 
+  ENV['RECAPTCHA_PRIVATE_KEY'] = '6LfuIN0SAAAAAEWR3_RVhKeB7jWrMqePizj0yesA'
 
 end
