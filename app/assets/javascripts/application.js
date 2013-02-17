@@ -12,6 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery/jquery.roundabout.min
 //= require bootstrap
 //= require_tree .
