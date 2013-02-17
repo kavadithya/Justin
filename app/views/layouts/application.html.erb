@@ -1,11 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
+    
     <title><%= full_title(yield(:title)) %></title>
     <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 
-    <%= stylesheet_link_tag    "application", media: "all" %>
+    
     <%= javascript_include_tag "application" %>
+
+    <%= stylesheet_link_tag    "application", media: "all" %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>  
       <style rel="stylesheet" type="text/css" media="screen">
@@ -93,6 +96,7 @@
   
   </head>
   <body>
+    
     <%= render 'layouts/header' %>
     <div class="container-fluid">
       <div >
@@ -101,6 +105,7 @@
           <%= value %>
         </div>
       <% end %>
+    
       <%= yield %>
       <% if request.fullpath == root_path %>
         <%= render 'layouts/footer_home_page' %>
