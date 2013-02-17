@@ -123,7 +123,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.8)
   recaptcha
-  sass-rails (~> 3.2.3)
+  sass-rails (~> 3.2.5)
   sqlite3 (= 1.3.5)
   tlsmail
   uglifier (>= 1.0.3)
