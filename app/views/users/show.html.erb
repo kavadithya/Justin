@@ -1,11 +1,33 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+<div class='row-fluid'>
+	<div class='span5' style='border-style:solid;border-width:2px;height:250px;'>
+		<%= image_tag 'rails.png' %>
+		<div class='forms'>
+			<%= form_for @user , :html => { :multipart => true } do |f| %>
+	    		<%= f.label :resume, 'Upload Resume' %>
+	    		<%= f.file_field :resume %>
+	    		<% f.submit 'Submit Resume' %>
+			<% end %>
+		</div>
+		<div class='row-fluid'>
+			<div class='span6'></div>
+			<div class='span4' style='font-size:15px;'>
+		<!--<div style='width:200px;margin: 0 auto;'>-->
+				<%= link_to 'Or Skip this step', '#' %>
+			</div>
+			<div class='span2'></div>
+		</div>
+	</div>
+	<div class='span4'>
+		<h2>WHY UPLOAD RESUME?</h2>
+		<div class='row-fluid'>
+			<div class='span3'></div>
+			<div class='span9'>
+				<h3 style='float:left;'><l1>Aids your job search</li></h3>
+				<h3 style='float:left;'><l1>Lets Employers find you</li></h3>
+				<h3 style='float:left;'><l1>It only takes a few seconds</li></h3>
+			</div>
+		</div>
+	</div>
+</div>
   

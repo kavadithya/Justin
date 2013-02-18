@@ -16,12 +16,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     check = params[:accept_terms].to_f
-
+    check = 1 #to be removed later
     if Rails.env.development?
       if check == 1 and @user.save
         #UserMailer.registration_confirmation(@user).deliver
 
-        flash[:success] = "Welcome to the Sample App!"
+        flash[:success] = "Welcome to the H1BWiki Jobs Portal!"
         redirect_to @user
         sign_in @user
       else

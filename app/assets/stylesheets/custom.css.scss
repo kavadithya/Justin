@@ -109,9 +109,9 @@
   filter: none;
   li {
       a{
-        color: white;
+        color: darkblue;
         &:hover {
-          background-color:white;/*rkblue;*/
+          background-color:darkblue;
         }
         }
     }
@@ -323,6 +323,7 @@ footer {
     li {
       float: left;
       margin-left: 10px;
+
     }
   }
 }
