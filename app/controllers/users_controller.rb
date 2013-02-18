@@ -15,14 +15,28 @@ class UsersController < ApplicationController
   end
   def create
     @user = User.new(params[:user])
-    if verify_recaptcha :private_key => '6LfuIN0SAAAAAEWR3_RVhKeB7jWrMqePizj0yesA' 
-      if @user.save
+    check = params[:accept_terms].to_f
+
+    if Rails.env.development?
+      if check == 1 and @user.save
         #UserMailer.registration_confirmation(@user).deliver
+
         flash[:success] = "Welcome to the Sample App!"
         redirect_to @user
         sign_in @user
       else
         render 'new'
+      end
+    else
+      if verify_recaptcha :private_key => '6LfuIN0SAAAAAEWR3_RVhKeB7jWrMqePizj0yesA' 
+        if check == 1 and @user.save
+          #UserMailer.registration_confirmation(@user).deliver
+          flash[:success] = "Welcome to the Sample App!"
+          redirect_to @user
+          sign_in @user
+        else
+          render 'new'
+        end
       end
     end
   end

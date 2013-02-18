@@ -1,5 +1,55 @@
 @import "bootstrap";
 
+.forms{
+  margin:0 auto;
+  width:400px;
+  padding:14px;
+  label{
+    display:block;
+    font-weight:bold;
+    text-align:right;
+    width:140px;
+    float:left;
+  }
+  select{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:200px;
+    margin:2px 0 20px 10px;
+  }
+  span{.small{
+    color:#666666;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    text-align:right;
+    width:140px;
+  }}
+  input{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:200px;
+    margin:2px 0 20px 10px;
+  }
+  button{
+    clear:both;
+    margin-left:150px;
+    width:125px;
+    height:31px;
+    background:#666666 url(img/button.png) no-repeat;
+    text-align:center;
+    line-height:31px;
+    color:#FFFFFF;
+    font-size:11px;
+    font-weight:bold;
+  }
+  
+
+}
 
 .box{
 .common_signup_box{
@@ -414,4 +464,5 @@ aside {
     margin-bottom: 5px;
   }
 }
+
 
